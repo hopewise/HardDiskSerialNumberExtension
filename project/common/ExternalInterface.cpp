@@ -22,7 +22,7 @@ static value test_sample_method (value inputValue) {
 static value test_get_harddisk_serial_number () {
 	
 	string hdSerialNumber = GetHarddiskSerialNumber();
-	return 0;//alloc_int(hdSerialNumber);
+	return alloc_string(hdSerialNumber);
 	
 }
 
