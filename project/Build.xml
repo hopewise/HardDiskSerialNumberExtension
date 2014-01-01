@@ -18,7 +18,11 @@
 	
 	<!-- When compiling for windows we use this -->
     <files id="windows">
-      <file name="windows/windows_info.cpp"/>
+		
+      <file name="windows/Hardware.cpp"/>
+	  <!--
+	  <file name="windows/Hardware.h"/>
+	  -->
     </files>
 
 	

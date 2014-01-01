@@ -1,5 +1,3 @@
-//#include "Utils.h"
-
 #include "stdafx.h"
 
 #define _WIN32_DCOM
@@ -8,14 +6,15 @@ using namespace std;
 #include <comdef.h>
 #include <Wbemidl.h>
 
+#include <hx/CFFI.h>
+
 #include <string>
 
 
 # pragma comment(lib, "wbemuuid.lib")
-namespace windows_info {
-
-	string GetHarddiskSerialNumber()
-	{
+namespace hardware {
+std::string GetHarddiskSerialNumber()
+{
 		HRESULT hres;
 
 		// Step 1: --------------------------------------------------
@@ -160,7 +159,7 @@ namespace windows_info {
 	 
 		IWbemClassObject *pclsObj;
 		ULONG uReturn = 0;
-		string result= "";
+		std::string result= "";
 		while (pEnumerator)
 		{
 			HRESULT hr = pEnumerator->Next(WBEM_INFINITE, 1, 
@@ -201,5 +200,5 @@ namespace windows_info {
 		CoUninitialize();
 		return result;
 		
-	}	
-}
+	}
+	}

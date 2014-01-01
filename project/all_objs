@@ -1,3 +1,3 @@
 obj/mscv16xp/common/ExternalInterface.obj
 obj/mscv16xp/common/test.obj
-obj/mscv16xp/windows/windows_info.obj
+obj/mscv16xp/windows/Hardware.obj

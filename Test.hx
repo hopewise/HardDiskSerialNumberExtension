@@ -17,13 +17,13 @@ class Test {
 	}
 	
 	
-	public static function GetDiskSize ():Int {
+	public static function GetHarddiskSerialNumber ():String {
 		
-		return test_get_harddisk_info();
+		return test_get_harddisk_serial_number();
 		
 	}
 	
-	private static var test_get_harddisk_info = Lib.load ("test", "test_get_harddisk_info", 0);
+	private static var test_get_harddisk_serial_number = Lib.load ("test", "test_get_harddisk_serial_number", 0);
 	
 	
 	private static var test_sample_method = Lib.load ("test", "test_sample_method", 1);
