@@ -23,6 +23,11 @@ namespace hardware {
 	
 std::string GetHarddiskSerialNumber()
 {
+	
+	// original code:
+	// http://msdn.microsoft.com/en-us/library/aa390423(v=vs.85).aspx
+	
+	
 		HRESULT hres;
 
 		// No need to initialize COM in openFL, as it seems that its already initialized when starting windows
