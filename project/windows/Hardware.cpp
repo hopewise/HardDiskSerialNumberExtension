@@ -28,7 +28,7 @@ std::string GetHarddiskSerialNumber()
 		// No need to initialize COM in openFL, as it seems that its already initialized when starting windows
 		// Step 1: --------------------------------------------------
 		// Initialize COM. ------------------------------------------
-        
+        /*
 		hres =  CoInitializeEx(0, COINIT_MULTITHREADED); 
 		if (FAILED(hres))
 		{
@@ -36,7 +36,7 @@ std::string GetHarddiskSerialNumber()
 				<< hex << hres << endl;
 			return "Failed to initialize COM library. Error code = 0x";                  // Program has failed.
 		}
-        
+        */
 		// Step 2: --------------------------------------------------
 		// Set general COM security levels --------------------------
 		// Note: If you are using Windows 2000, you need to specify -
