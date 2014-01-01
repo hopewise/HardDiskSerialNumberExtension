@@ -1,12 +1,12 @@
 {
-  "name": "test",
-  "url": "",
+  "name": "HardwareInfo",
+  "url": "https://github.com/hopewise/HardDiskSerialNumberExtension",
   "license": "MIT",
-  "tags": [],
-  "description": "",
+  "tags": ["device id", "hard disk", "serial number"],
+  "description": "This library will get the hard disk serial number+ manufacturer for windows, and Android ID for android using android.provider.Settings.Secure",
   "version": "1.0.0",
   "releasenote": "",
-  "contributors": [""],
+  "contributors": ["Samir Sabri"],
   "dependencies": {
 
   }

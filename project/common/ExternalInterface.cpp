@@ -9,12 +9,13 @@
 
 #include <hx/CFFI.h>
 #include "Utils.h"
-#include "../windows/HardWare.h"
 
-//#include <string>
+
+#include <string>
+using std::string;
 
 using namespace test;
-using namespace hardware;
+
 
 static value test_sample_method (value inputValue) {
 	
@@ -23,18 +24,9 @@ static value test_sample_method (value inputValue) {
 	
 }
 
-static std::string test_get_harddisk_serial_number () {
-	
-	std::string hdSerialNumber = GetHarddiskSerialNumber();
-	return hdSerialNumber;
-	
-}
-
 
 
 DEFINE_PRIM (test_sample_method, 1);
-DEFINE_PRIM (test_get_harddisk_serial_number, 0);
-
 
 
 extern "C" void test_main () {

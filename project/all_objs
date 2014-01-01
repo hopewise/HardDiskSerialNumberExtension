@@ -1,3 +1,4 @@
 obj/mscv16xp/common/ExternalInterface.obj
 obj/mscv16xp/common/test.obj
 obj/mscv16xp/windows/Hardware.obj
+obj/mscv16xp/windows/ExternalInterface.obj

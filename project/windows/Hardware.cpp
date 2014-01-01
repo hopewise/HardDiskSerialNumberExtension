@@ -1,3 +1,9 @@
+#include <string>
+using std::string;
+
+
+
+
 #include "stdafx.h"
 
 #define _WIN32_DCOM
@@ -8,26 +14,29 @@ using namespace std;
 
 #include <hx/CFFI.h>
 
-#include <string>
+
 
 
 # pragma comment(lib, "wbemuuid.lib")
 namespace hardware {
+	
+	
 std::string GetHarddiskSerialNumber()
 {
 		HRESULT hres;
 
+		// No need to initialize COM in openFL, as it seems that its already initialized when starting windows
 		// Step 1: --------------------------------------------------
 		// Initialize COM. ------------------------------------------
-
+        
 		hres =  CoInitializeEx(0, COINIT_MULTITHREADED); 
 		if (FAILED(hres))
 		{
 			cout << "Failed to initialize COM library. Error code = 0x" 
 				<< hex << hres << endl;
-			return "1";                  // Program has failed.
+			return "Failed to initialize COM library. Error code = 0x";                  // Program has failed.
 		}
-
+        
 		// Step 2: --------------------------------------------------
 		// Set general COM security levels --------------------------
 		// Note: If you are using Windows 2000, you need to specify -
@@ -53,7 +62,7 @@ std::string GetHarddiskSerialNumber()
 			cout << "Failed to initialize security. Error code = 0x" 
 				<< hex << hres << endl;
 			CoUninitialize();
-			return "1";                    // Program has failed.
+			return "Failed to initialize security. Error code = 0x";                    // Program has failed.
 		}
 		
 		// Step 3: ---------------------------------------------------
@@ -180,6 +189,7 @@ std::string GetHarddiskSerialNumber()
 
 			hr = pclsObj->Get(L"Manufacturer", 0, &vtProp, 0, 0);
 			wstring ws2(vtProp.bstrVal, SysStringLen(vtProp.bstrVal));
+			result+=",";
 			result+= string(ws2.begin(), ws2.end());
 			VariantClear(&vtProp);
 
@@ -201,4 +211,5 @@ std::string GetHarddiskSerialNumber()
 		return result;
 		
 	}
-	}
+}// name space
+

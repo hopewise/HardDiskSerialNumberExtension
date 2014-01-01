@@ -20,11 +20,16 @@
     <files id="windows">
 		
       <file name="windows/Hardware.cpp"/>
+	  <file name="windows/ExternalInterface.cpp"/>
 	  <!--
 	  <file name="windows/Hardware.h"/>
 	  -->
     </files>
-
+	
+	
+	<files id="android">
+     <!-- <file name="android/Hardware.cpp"/> -->
+    </files>
 	
 	<set name="name_prefix" value="lib" if="iphone"/>
 	<set name="ARM_ARCH" value="-v7" if="HXCPP_ARMV7"/>
